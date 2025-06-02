@@ -25,6 +25,7 @@ const CreateTask = ({ Authdata }) => {
             if (Asignto === elm.firstName) {
                 if (!elm.tasks) elm.tasks = [];
                 elm.tasks.push(newTask);
+                console.log('New task added:', newTask);
             }
         });
         localStorage.setItem('employees', JSON.stringify(data));
@@ -56,7 +57,7 @@ const CreateTask = ({ Authdata }) => {
 
             </div>
 
-            <div className="max-w-4xl mx-auto bg-slate-700 p-4 sm:p-8 rounded-xl shadow-lg">
+            <div className="max-w-4xl mx-auto bg-slate-700 p-4 sm:p-8 rounded-xl shadow-lg relative z-50">
                 <h2 className="text-2xl sm:text-3xl font-semibold text-center mb-6">Create New Task</h2>
                 <form onSubmit={(e) => {
                     submithandler(e);

@@ -6,7 +6,7 @@ const AllTask = ({ Authdata }) => {
     const data = useContext(AuthContext);
 
     return (
-      <div className="p-2 sm:p-4 md:p-6 rounded-lg bg-slate-700 text-white shadow-lg overflow-x-auto w-full">
+      <div className="p-2 sm:p-4 md:p-6 rounded-lg bg-slate-700 text-white shadow-lg overflow-x-auto w-full mt-64">
         {/* Table Header */}
         <div className="min-w-[500px] grid grid-cols-5 gap-2 bg-slate-600 mb-3 py-2 px-2 sm:py-3 sm:px-5 rounded-md font-semibold text-xs sm:text-sm uppercase tracking-wide border-2 border-white">
           <h2 className="text-center">Employee Name</h2>
@@ -33,5 +33,6 @@ const AllTask = ({ Authdata }) => {
       </div>
     )
 }
-
+{/* Add space between CreateTask and AllTask */}
+<div className="my-6"></div>
 export default AllTask
